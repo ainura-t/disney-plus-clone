@@ -1,4 +1,6 @@
 import React,{ useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 import {
@@ -55,7 +57,10 @@ function Header() {
 
     return (
         <Nav>
+            <Link to="/">
             <Logo src="/images/logo.svg" />
+            </Link>
+            
             { !userName ?
            ( <LoginContainer>
                 <Login onClick={signIn} >Login</Login>
